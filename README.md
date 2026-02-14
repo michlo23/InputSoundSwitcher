@@ -17,17 +17,30 @@ A macOS menu bar app for quickly switching audio input devices. Built to solve t
 
 ## Install
 
+### One-liner
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/michlo23/InputSoundSwitcher/main/install.sh | bash
+```
+
+### Homebrew
+
+```bash
+brew install michlo23/tap/inputsoundswitcher
+cp -r $(brew --prefix)/InputSoundSwitcher.app /Applications/
+```
+
 ### Build from source
 
 No Xcode required — just Command Line Tools (`xcode-select --install`).
 
 ```bash
-git clone <this-repo>
-cd inputSoundSwitcher
+git clone https://github.com/michlo23/InputSoundSwitcher.git
+cd InputSoundSwitcher
 ./build.sh
 ```
 
-This builds the app and installs it to `/Applications/`. Then run:
+All methods install to `/Applications/`. Then run:
 
 ```bash
 open /Applications/InputSoundSwitcher.app
