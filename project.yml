@@ -1,0 +1,29 @@
+name: InputSoundSwitcher
+options:
+  bundleIdPrefix: com.michlo23
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "16.0"
+
+packages:
+  HotKey:
+    url: https://github.com/soffes/HotKey.git
+    from: "0.2.1"
+
+targets:
+  InputSoundSwitcher:
+    type: application
+    platform: macOS
+    sources:
+      - InputSoundSwitcher
+    settings:
+      base:
+        INFOPLIST_FILE: InputSoundSwitcher/Info.plist
+        CODE_SIGN_ENTITLEMENTS: InputSoundSwitcher/InputSoundSwitcher.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.michlo23.InputSoundSwitcher
+        SWIFT_VERSION: "5.9"
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_APP_SANDBOX: NO
+    dependencies:
+      - package: HotKey
